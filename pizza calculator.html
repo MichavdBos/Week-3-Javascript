@@ -1,0 +1,39 @@
+<html>
+	<body>
+		<script>
+//Micha van den Bos
+//Groep A1
+//Opdracht: Pizza calculator
+
+//Geeft de prijzen per grootte pizza aan en initialiseerd prijzen als constantes
+	alert("De prijs van een Small pizza is 4 euro");
+	const PRICESMALL = 4;
+	alert("De prijs van een Medium pizza is 6 euro");
+	const PRICEMEDIUM = 6;
+	alert("De prijs van een Large pizza is 8 euro");
+	const PRICELARGE = 8;
+
+//Do-while loop voor vragen aantal pizza's en alleen cijfers (geen letters of niks)
+	do {
+		var PizzaSmall = prompt("Hoeveel Small Pizza's zou u willen ?");
+	} while (isNaN(PizzaSmall) || PizzaSmall == "");
+	do {
+		var PizzaMedium = prompt("Hoeveel Medium Pizza's zou u willen ?");
+	} while (isNaN(PizzaMedium) || PizzaMedium == "");
+	do {
+		var PizzaLarge = prompt("Hoeveel Large Pizza's zou u willen ?");
+	} while (isNaN(PizzaLarge) || PizzaLarge == "");
+
+//Berekent de totaalprijs en laat deze zien
+	var TotaalPrijs = 0;
+
+	TotaalPrijs += (PizzaSmall * PRICESMALL) +  (PizzaMedium * PRICEMEDIUM) +  (PizzaLarge * PRICELARGE);
+	
+	document.write("U heeft " + PizzaSmall + " small pizza's bestelt, de prijs hiervan is " + (PRICESMALL * PizzaSmall) + " euro." + "<br>");
+	document.write("U heeft " + PizzaMedium + " medium pizza's bestelt, de prijs hiervan is " + (PRICEMEDIUM * PizzaMedium) + " euro." + "<br>");
+	document.write("U heeft " + PizzaLarge + " large pizza's bestelt, de prijs hiervan is " + (PRICELARGE * PizzaLarge) + " euro." + "<br>");
+	document.write("<br>" + "De totale prijs van uw bestelling is" + " " + TotaalPrijs + " " + "euro");
+
+		</script>
+	</body>
+</html>
